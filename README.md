@@ -1,0 +1,3 @@
+# Data Race in Rust with Multiple Mutable References
+
+This repository demonstrates a classic data race bug in Rust.  The code attempts to create two mutable references (`y` and `z`) to the same variable (`x`). While the code compiles without error, concurrently modifying the variable through these references leads to undefined behavior and potential data corruption at runtime. The solution demonstrates how to avoid this issue by using appropriate synchronization primitives or modifying the code's logic to avoid mutable aliasing.
